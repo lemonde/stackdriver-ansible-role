@@ -23,7 +23,7 @@
   when: stackdriver_enabled
 
 - name: stackdriver updated
-  sudo: no
+  become: False
   local_action:
     module: stackdriver
     event: annotation
